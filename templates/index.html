@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Young and Sexy App</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Young and Sexy App</h1>
+        <form id="taskForm">
+            <label for="level">Select Level:</label>
+            <select id="level" name="level">
+                <option value="1">Level-1</option>
+                <option value="2">Level-2</option>
+                <option value="3">Level-3</option>
+                <option value="4">Level-4</option>
+            </select>
+            <div>
+                <button type="button" class="gender-button" data-gender="MEN">MEN</button>
+                <button type="button" class="gender-button" data-gender="FEMALE">FEMALE</button>
+            </div>
+        </form>
+        <div id="responses">
+            <h2>Responses</h2>
+            <div id="nousResponse"></div>
+            <div id="grokResponse"></div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

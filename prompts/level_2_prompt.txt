@@ -1,0 +1,1 @@
+This is the system prompt for Level 2. Guide the Nous Hermes model accordingly.

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Edit Prompts</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Edit System Prompts</h1>
+        <form method="POST">
+            {% for level, prompt in prompts.items() %}
+                <div>
+                    <label for="{{ level }}">{{ level.replace('_', ' ').title() }}:</label>
+                    <textarea id="{{ level }}" name="{{ level }}" rows="4">{{ prompt }}</textarea>
+                </div>
+            {% endfor %}
+            <button type="submit">Save Changes</button>
+        </form>
+    </div>
+</body>
+</html>

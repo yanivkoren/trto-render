@@ -1,0 +1,1 @@
+Translate the response received from the Nous Hermes model into a clear and concise format.
